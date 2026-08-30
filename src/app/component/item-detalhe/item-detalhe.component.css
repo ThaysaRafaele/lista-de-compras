@@ -1,0 +1,26 @@
+div {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+img {
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+h2 {
+  color: #6b2d8c;
+}
+
+a {
+  display: inline-block;
+  margin-top: 16px;
+  color: #6b2d8c;
+  text-decoration: none;
+  font-weight: bold;
+}

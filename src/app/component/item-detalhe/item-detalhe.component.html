@@ -1,0 +1,7 @@
+<div *ngIf="produto">
+  <img [src]="produto.image" [alt]="produto.title" width="150">
+  <h2>{{produto.title}}</h2>
+  <p><strong>Categoria:</strong> {{ produto.category }}</p>
+  <p><strong>Descrição:</strong> {{ produto.description }}</p>
+  <a routerLink="/">Voltar pra lista</a>
+</div>

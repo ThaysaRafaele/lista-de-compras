@@ -1,0 +1,33 @@
+<div class="item" *ngFor="let item of listaService.itens">
+  <p [class.riscado]="item.comprado">Nome: {{item.nome}}</p>
+  <p>Quantidade: {{item.quantidade}}</p>
+  <p>Comprado: {{item.comprado}}</p>
+  <button (click)="listaService.marcarComprado(item)">Comprado</button>
+</div>
+<p *ngIf="listaService.itens.length === 0">Sua lista está vazia.</p>
+
+<form [formGroup]="formItem" class="form-item" (ngSubmit)="enviar()">
+  <div class="campo">
+    <input formControlName="nome" placeholder="Nome do item">
+    <p class="erro" *ngIf="formItem.get('nome')?.invalid && formItem.get('nome')?.touched">
+      Preencha o nome do item!
+    </p>
+  </div>
+  <div class="campo">
+    <input formControlName="quantidade" type="number" placeholder="Quantidade" min="1">
+    <p class="erro" *ngIf="formItem.get('quantidade')?.invalid && formItem.get('quantidade')?.touched">
+      Preencha a quantidade do item!
+    </p>
+  </div>
+  <button type="submit" [disabled]="!formItem.valid">Adicionar</button>
+</form>
+
+<h2 class="titulo-secao">Sugestões</h2>
+<div class="grade-produtos">
+  <div class="produtos" *ngFor="let produto of sugestoes">
+    <img [src]="produto.image" [alt]="produto.title" width="100">
+    <p class="produto-titulo">{{produto.title}}</p>
+    <p class="produto-preco">R$ {{produto.price}}</p>
+    <a [routerLink]="['/item', produto.id]">Ver detalhes</a>
+  </div>
+</div>
