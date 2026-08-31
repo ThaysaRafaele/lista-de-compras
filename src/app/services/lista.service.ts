@@ -16,8 +16,6 @@ export class ListaService {
 
   marcarComprado(item: any)
   {
-    console.log("clicou no botão")
-    console.log(item)
     item.comprado = !item.comprado
   }
 
