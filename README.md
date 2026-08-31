@@ -22,6 +22,6 @@ Pré-requisitos: [Node.js](https://nodejs.org) instalado.
 
 ## Scripts úteis
 
-- `npm start` — equivalente a `ng serve`
-- `npm run build` — gera o build de produção em `dist/`
-- `npm test` — executa os testes unitários (Karma/Jasmine)
+- `npm start` -> equivalente a `ng serve`
+- `npm run build` -> gera o build de produção em `dist/`
+- `npm test` -> executa os testes unitários (Karma/Jasmine)
